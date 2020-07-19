@@ -29,6 +29,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '@storefront-ui/vue/styles.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -65,5 +66,6 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    transpile: [/^@storefront-ui/]
   }
 }

@@ -22,13 +22,32 @@
         >
           GitHub
         </a>
+
+        <SfButton
+          :disabled="disabled"
+          :link="link"
+        >
+          {{ customLabel }}
+        </SfButton>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import { SfButton } from '@storefront-ui/vue'
+export default {
+  components: {
+    SfButton
+  },
+  data () {
+    return {
+      customLabel: 'Shop now',
+      disabled: false,
+      link: 'https://nuxtjs.org/'
+    }
+  }
+}
 </script>
 
 <style>
